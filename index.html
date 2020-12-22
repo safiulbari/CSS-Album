@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Frame</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700);
+
+        * {font-family: Space Grotesk;
+            padding: 0;
+            margin: 0;
+        }
+        .photo-album{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .photo-frame {
+            position: relative;
+            width: 300px;
+            height: 240px;
+            border-radius: 10px;
+        }
+        .photo-frame .photo img {
+            width: 100%;
+            height: 240px;
+        }
+        .photo-detail{
+            position: absolute;
+            box-sizing: border-box;
+            width: 100%;
+            height: 240px;
+            top: 0px;
+            padding-top: 90px;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: none;
+        }
+        .photo .photo-detail h3 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .photo-frame:hover .photo-detail{
+            display: block;
+            color: whitesmoke;
+            background-color: rgba(0, 0, 0, 0.70);
+            cursor: pointer;
+        }
+        @media (max-width: 900px) {
+            .photo-album {
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-album">
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/tiger.bmp" alt="">
+                <div class="photo-detail">
+                    <h3>Royal Bengal Tiger</h3>
+                    <p>The Bengal Tiger (Panthera tigris tigris) is recognised as the national animal of bangladesh</p>
+                </div>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/lion.bmp" alt="">
+                <div class="photo-detail">
+                    <h3>Panthera leo</h3>
+                    <p>The lion (Panthera leo) is a species in the family Felidae and a member of the genus Panthera</p>
+                </div>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/panther.bmp" alt="">
+                <div class="photo-detail">
+                    <h3>Black panther</h3>
+                    <p>A black panther is the melanistic colour variant found in members of the genus Panthera,</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
